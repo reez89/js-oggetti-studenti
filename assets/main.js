@@ -10,7 +10,7 @@ Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo ogg
 //     age : 31
 // }
 // Tramite il ciclo for in, visualizzo le proprietò e il loro valore.
-// N
+// 
 // Creo uno array di oggetti studeti con le proprietà name and surname.
 
 class student{
@@ -21,13 +21,13 @@ class student{
     }
 }
 
+
 var newStudent = new student(prompt("Insert your name"),prompt("Insert your surname"),prompt("Insert your age"));
 
 var arrStudents = [
-
     {
     name :"Gianni",
-    surname : "Morandi"
+    surname : "Morandi",
 },
  {
     name :"Claudio",
@@ -46,9 +46,18 @@ var arrStudents = [
 }
 ]
 
-for (const key in arrStudents) {
-    console.log(arrStudents[key]);
-}
+for (var key in arrStudents) {
+     console.log(arrStudents[key]);
+ }
+
+
+for (i = 0; i < arrStudents.length; i++){
+    document.getElementById("output").innerHTML += 
+    "<li> " +
+    "Nome: " + arrStudents[i].name + "<br>" + 
+    "Cognome: " + arrStudents[i].surname + "<br>"
+    "</li>";
+  }
 
 
 
