@@ -9,57 +9,62 @@ Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo ogg
 //     surname : "Rizzi",
 //     age : 31
 // }
-// Tramite il ciclo for in, visualizzo le proprietò e il loro valore.
-// 
+
+// class student{
+//     constructor(name,surname,age){
+//         this.name = name,
+//         this.surname = surname,
+//         this.age = age
+//     }
+// }
+
+// Creo un'oggetto chiedendo all'utente nome, cognome, età.
+
+var newStudent = {
+name: prompt("Insert your name"),
+surname:prompt("Insert your surname"),
+age: prompt("Insert your age")
+};
+
 // Creo uno array di oggetti studeti con le proprietà name and surname.
-
-class student{
-    constructor(name,surname,age){
-        this.name = name,
-        this.surname = surname,
-        this.age = age
-    }
-}
-
-
-var newStudent = new student(prompt("Insert your name"),prompt("Insert your surname"),prompt("Insert your age"));
 
 var arrStudents = [
     {
-    name :"Gianni",
-    surname : "Morandi",
-},
- {
-    name :"Claudio",
-    surname : "Coccoluto"
-},
- {
-    name :"Franco",
-    surname : "Spezio"
-},
- {
-    name :"Gianna",
-    surname : "Nannini"
-},
-{
-    newStudent
-}
+        name :"Gianni",
+        surname : "Morandi",
+    },
+    {
+        name :"Claudio",
+        surname : "Coccoluto"
+    },
+    {
+        name :"Franco",
+        surname : "Spezio"
+    },
+    {
+        name :"Gianna",
+        surname : "Nannini"
+    },
 ]
+// Inserisco all'interno del mio array di oggetti, i dati inseriti dall'utente.
 
-for (var key in arrStudents) {
-     console.log(arrStudents[key]);
- }
+arrStudents.push(newStudent);
 
+// Con questo ciclo controllo tutti i valori del mio array.
 
-for (i = 0; i < arrStudents.length; i++){
-    document.getElementById("output").innerHTML += 
-    "<li> " +
-    "Nome: " + arrStudents[i].name + "<br>" + 
-    "Cognome: " + arrStudents[i].surname + "<br>"
-    "</li>";
-  }
+ for (var key in arrStudents) {
+         console.log(arrStudents[key]);
+     }
+// Per stampare a schermo il contenuto del mio array, uso un ciclo for.
 
-
-
-
-
+    for (i = 0; i < arrStudents.length; i++){
+        document.getElementById("output").innerHTML += 
+        "<li> " +
+        "Nome: " + arrStudents[i].name + "<br>" + 
+        "Cognome: " + arrStudents[i].surname + "<br>"
+        "</li>";
+        
+    }
+    
+    console.log(arrStudents);
+    console.log(newStudent);
